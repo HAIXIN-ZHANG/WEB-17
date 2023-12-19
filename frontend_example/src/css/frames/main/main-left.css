@@ -1,27 +1,8 @@
 .container .main-left {
-    border: 1px solid black;
     width: 20%;
     display: flex;
     flex-direction: column;
-}
-
-.main-left .profile {
-    display: flex;
-    background-color: var(--panel-bgcolor);
-    height: 3rem;
-    align-items: center;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-}
-
-.main-left .profile-photo {}
-
-.main-left .profile-description {
-    display: block;
-    margin-left: 1rem;
-    line-height: 0;
-    color: var(--color-black);
+    padding: 1rem 0;
 }
 
 .main-left .sidebar {
@@ -60,4 +41,9 @@
     box-shadow: none;
     border: none;
     align-self: center;
+}
+
+.main-left .side-btn:hover {
+    color: black;
+    transition: all 0.5s ease-in-out;
 }

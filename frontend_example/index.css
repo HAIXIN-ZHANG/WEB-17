@@ -11,6 +11,8 @@
 @import "./src/css/frames/main/main-right.css";
 
 /* --- Components --- */
+@import "./src/css/components/button.css";
+@import "./src/css/components/search.css";
 @import "./src/css/components/profile.css";
 
 /* --- Media --- */

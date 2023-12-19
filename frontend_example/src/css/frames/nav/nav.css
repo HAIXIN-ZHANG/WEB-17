@@ -30,7 +30,7 @@ nav a {
 nav .search-bar {
     background-color: var(--panel-bgcolor);
     width: 20vw;
-    padding: 0.5rem;
+    padding: 0.7rem;
     display: flex;
     align-items: center;
     border-radius: 2rem;
@@ -46,23 +46,15 @@ nav input[type="text"] {
     outline: none;
 }
 
-nav .btn {
-    width: 8rem;
-    color: var(--color-white);
-    border-radius: var(--btn-border-radius);
-    padding: var(--btn-padding);
-    box-shadow: none;
-    border: none;
-}
-
-nav .btn-primary {
-    background-color: var(--color-primary);
-}
-
 nav .create {
     display: flex;
-    width: 14rem;
+    width: 11rem;
     align-items: center;
     justify-content: space-between;
-    padding-right: 1rem;
+    padding-right: 2rem;
+}
+
+nav .create > .btn:hover {
+    color: black;
+    transition: all 0.5s ease-in-out;
 }
