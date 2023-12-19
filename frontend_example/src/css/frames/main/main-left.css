@@ -1,0 +1,63 @@
+.container .main-left {
+    border: 1px solid black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-left .profile {
+    display: flex;
+    background-color: var(--panel-bgcolor);
+    height: 3rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+}
+
+.main-left .profile-photo {}
+
+.main-left .profile-description {
+    display: block;
+    margin-left: 1rem;
+    line-height: 0;
+    color: var(--color-black);
+}
+
+.main-left .sidebar {
+    background-color: var(--panel-bgcolor);
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+}
+
+.main-left ul {
+    padding-inline-start: 0;
+}
+
+.main-left li {
+    list-style-type: none;
+}
+
+.main-left .sidebar .menu-item {
+    display: flex;
+    font-family: sans-serif;
+    height: 5rem;
+    align-items: center; 
+    cursor: pointer;
+    padding-left: 2rem;
+}
+
+.main-left .sidebar .menu-item:hover {
+    background-color: var(--color-primary);
+}
+
+.main-left .side-btn {
+    width: 85%;
+    color: var(--color-white);
+    background-color:  var(--color-primary);
+    border-radius: var(--btn-border-radius);
+    padding: var(--btn-padding);
+    box-shadow: none;
+    border: none;
+    align-self: center;
+}

@@ -1,0 +1,14 @@
+.profile-photo {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    border: 0.2rem solid grey;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
