@@ -10,7 +10,8 @@
 @import "./src/css/frames/main/main-middle.css";
 @import "./src/css/frames/main/main-right.css";
 
-@import "./src/css/frames/media/media.css";
-
 /* --- Components --- */
 @import "./src/css/components/profile.css";
+
+/* --- Media --- */
+@import "./src/css/frames/media/media.css";
