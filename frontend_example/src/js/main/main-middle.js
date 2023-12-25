@@ -83,3 +83,75 @@ export const mainMiddleInput = (profile) =>
 export const setMiddlePostPhoto = profile => {
     document.querySelector(".main-middle-thought-wrapper > .profile-photo > img").src = profile.img_src;
 };
+
+
+// random image
+
+const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+export function getRandomImages() {
+    const images = [
+        "//ik.imagekit.io/fangweij/highline/highline_1.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_2.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_3.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_4.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_5.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_6.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_7.webp",
+        "//ik.imagekit.io/fangweij/highline/highline_8.webp",
+    ];
+    const images2 = [
+        "//ik.imagekit.io/fangweij/profile/profile_1.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_2.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_3.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_4.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_5.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_6.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_7.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_8.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_9.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_10.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_11.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_12.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_13.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_14.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_15.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_16.webp",
+        "//ik.imagekit.io/fangweij/profile/profile_17.webp",
+    ];
+    const images3 = [
+        "//ik.imagekit.io/fangweij/post/post_1.webp",
+        "//ik.imagekit.io/fangweij/post/post_2.webp",
+        "//ik.imagekit.io/fangweij/post/post_3.webp",
+        "//ik.imagekit.io/fangweij/post/post_4.webp",
+        "//ik.imagekit.io/fangweij/post/post_5.webp",
+        "//ik.imagekit.io/fangweij/post/post_6.webp",
+        "//ik.imagekit.io/fangweij/post/post_7.webp",
+        "//ik.imagekit.io/fangweij/post/post_8.webp",
+        "//ik.imagekit.io/fangweij/post/post_9.webp",
+        "//ik.imagekit.io/fangweij/post/post_10.webp",
+        "//ik.imagekit.io/fangweij/post/post_11.webp",
+    ];
+    const shuffledImages = shuffleArray(images);
+    const selectedImages = shuffledImages.slice(0, 6);
+    const shuffledImages2 = shuffleArray(images2);
+    const selectedImages2 = shuffledImages2.slice(0, 6);
+    const shuffledImages3 = shuffleArray(images3);
+    const selectedImages3 = shuffledImages3.slice(0, 4);
+    const imageContainer = document.querySelectorAll(".main-middle-card > img");
+    imageContainer.forEach((img, index) => (img.src = selectedImages[index]));
+    const profileContainer = document.querySelectorAll(".main-middle-card > .profile-photo > img");
+    profileContainer.forEach((img, index) => (img.src = selectedImages2[index]));
+    const postContainer = document.querySelectorAll(".info-picture > img");
+    postContainer.forEach((img, index) => (img.src = selectedImages3[index]));
+}
+
+export const randomPickImage = () => setInterval(() => getRandomImages(), 6000);
+

@@ -6,7 +6,7 @@
 }
 
 @media screen and (width <  1245px) {
-    .container .main-left {
+    .container .main-right {
         display: none;
     }
 }

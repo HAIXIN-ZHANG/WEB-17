@@ -10,6 +10,7 @@ import {
     generateMiddlePostList,
     mainMiddleInput,
     setMiddlePostPhoto,
+    randomPickImage,
 } from "@/js/main/main-middle.js";
 import {
     friendOptionPanelLogic,
@@ -50,6 +51,8 @@ popupClose.forEach(value => value.addEventListener("click", popupCloseLogic));
 
 generateMiddlePostList(cards)
 mainMiddleInput(profile)
+// pick images randomly
+randomPickImage();
 
 // main-right
 // main-right searchbar functionality
